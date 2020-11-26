@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/home"
+        android:title=""
+        android:icon="@drawable/ic_outline_home_24"
+        app:showAsAction="always"></item>
+
+    <item android:id="@+id/fav"
+        android:title=""
+        android:icon="@drawable/ic_baseline_favorite_border_24"
+        app:showAsAction="always"></item>
+
+    <item android:id="@+id/calendar"
+        android:title=""
+        android:icon="@drawable/ic_baseline_date_range_24"
+        app:showAsAction="always"></item>
+
+    <item android:id="@+id/account"
+        android:title=""
+        android:icon="@drawable/ic_outline_account_circle_24"
+        app:showAsAction="always"></item>
+</menu>

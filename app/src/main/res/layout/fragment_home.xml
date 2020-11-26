@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+  <com.facebook.shimmer.ShimmerFrameLayout
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/shimmer_container"
+      android:layout_height="match_parent"
+      android:layout_width="match_parent"
+      app:shimmer_duration="800">
+
+
+    <include layout="@layout/shimmercard"></include>
+    <include layout="@layout/shimmercard2"></include>
+
+  </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginEnd="20dp"
+      android:layout_marginTop="20dp"
+      android:src="@drawable/ic_outline_shopping_cart_24"></ImageView>
+
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop for"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/manjari_bold"
+        android:textSize="40sp"
+        android:textColor="#000000"></TextView>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plant"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/manjari_bold"
+        android:textSize="40sp"
+        android:textColor="#000000"></TextView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toBottomOf="@id/text2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"></androidx.recyclerview.widget.RecyclerView>
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintTop_toBottomOf="@id/recycler1"
+      android:layout_marginTop="20dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/bottomnav1"
+      android:layout_marginBottom="20dp"
+      android:id="@+id/recycler2"></androidx.recyclerview.widget.RecyclerView>
+
+
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+
+
+
+
+
+
+      android:id="@+id/bottomnav1"
+      android:layout_width="match_parent"
+      android:layout_height="70dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:background="@drawable/roundednav"
+      app:menu="@menu/bottomnav"
+      app:itemIconTint="@drawable/item_select">
+  </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
